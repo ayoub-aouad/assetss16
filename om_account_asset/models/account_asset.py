@@ -110,7 +110,7 @@ class AccountAssetAsset(models.Model):
                          states={'draft': [('readonly', False)]})
     currency_id = fields.Many2one('res.currency', string='Currency', required=True,
                                   readonly=True, states={'draft': [('readonly', False)]},
-        default=lambda self: self.env.user.company_id.currency_id.id)
+        default=109)
     company_id = fields.Many2one('res.company', string='Company', required=True,
                                  readonly=True, states={'draft': [('readonly', False)]},
                                  default=lambda self: self.env.company)
